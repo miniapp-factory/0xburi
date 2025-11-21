@@ -1,3 +1,3 @@
 export const title = "BTC price checker";
-export const description = "This app was created by the Mini App Factory!";
+export const description = "Check OPENX price and display local/UTC time with a quote.";
 export const url = process.env.NEXT_PUBLIC_URL;
