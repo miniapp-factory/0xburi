@@ -218,3 +218,27 @@
 +Prompt: "The dinner bill is 7,800 JPY. We want to leave a 10% tip and split the total evenly among 4 people. Show the final per-person cost in AUD."
 +
 +Focus: Tests integrated calculator functions (addition/percentage/division) within the currency conversion flow.
+
+# 2025-11-26 17:29:24.085745
++build currency converter app.
++
++set Place holder next to each currency code in order to put amount.
++
++convert with major but we must choose and add desired currency from the dropdown list.
++
++drop down including all world currencies.
++
++User can add target currency as much as user could.
++
+
+# 2025-11-26 17:29:24.087250
++build currency converter app.
++
++set Place holder next to each currency code in order to put amount.
++
++convert with major but we must choose and add desired currency from the dropdown list.
++
++drop down including all world currencies.
++
++User can add target currency as much as user could.
++
