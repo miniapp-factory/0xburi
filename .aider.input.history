@@ -100,3 +100,121 @@
 +please quote $OPENX instead $ETH.
 +
 +quote the $OPENX data from "https://www.coingecko.com/en/coins/openxai"
+
+# 2025-11-26 16:58:04.597996
++change app name to "Currency Converter"
++
++generate new icon image "Currency Converter app"
++
++Traveler-Centric Prompts
++These prompts reflect real-world scenarios where a traveler would urgently need the app.
++
++1. Offline Reliability & Context
++The most critical feature for a traveler.
++
++Prompt: "I just landed in Thailand (THB) and have no data connection. Convert 1,500 THB to my home currency (USD) and clearly display the time the last rate update was made."
++
++Focus: Tests offline mode, defaults to the user's home currency, and provides transparency on data freshness.
++
++Prompt: "Open the app in 'Offline Mode' and show the 5-day historical trend for EUR/USD using only cached data."
++
++Focus: Tests if historical data, not just the spot rate, is available for basic offline planning.
++
++2. Quick Price Check (The Bazaar/Market Test)
++Fast input and comparison are essential when haggling or shopping.
++
++Prompt: "A vendor quotes 28,000 COP for a souvenir. Convert this to CAD immediately, and then quickly convert 32,000 COP without clearing the screen."
++
++Focus: Tests speed of entry, ability to convert large numbers accurately, and retaining the context for comparison.
++
++Prompt: "A menu item is listed at $18 USD in a country that uses MXN. Convert the price to MXN and display the result alongside the $15 USD price for the alternative item."
++
++Focus: Tests side-by-side or quick-toggle comparison for decision-making.
++
++3. The ATM and Fee Dilemma
++Travelers often use ATMs, where fees and manual rates are key.
++
++Prompt: "I am withdrawing €200 EUR. My bank charges a 4% foreign transaction fee. Calculate the total amount in GBP (my home currency) after the fee is applied."
++
++Focus: Tests the ability to add a custom percentage fee to the conversion calculation.
++
++Prompt: "A local ATM offers a static rate of 1 AUD = 0.65 EUR (Dynamic Currency Conversion). I want to compare this to the app's current live rate. Show the difference in AUD for a €500 withdrawal."
++
++Focus: Tests the ability to temporarily input a manual, user-defined exchange rate for comparison purposes.
++
++4. Multi-Stop Trip Management
++For users crossing borders or dealing with a temporary local currency.
++
++Prompt: "Set the primary 'Local' currency to CZK and a secondary 'Home' currency to USD. Convert $40 USD to CZK, and then immediately convert the resulting CZK amount into PLN for the next leg of the trip."
++
++Focus: Tests chain conversions and managing a default 'Home' vs. 'Local' currency pair.
++
++Prompt: "Create a 'Trip Folder' for my upcoming Asia Tour and pre-select JPY, KRW, THB, and SGD for immediate display whenever the folder is opened."
++
++Focus: Tests pre-configuration, multi-currency display, and quick switching between relevant currency lists.
++
++5. Tipping and Splitting Bills
++Common, on-the-spot mathematical needs.
++
++Prompt: "The dinner bill is 7,800 JPY. We want to leave a 10% tip and split the total evenly among 4 people. Show the final per-person cost in AUD."
++
++Focus: Tests integrated calculator functions (addition/percentage/division) within the currency conversion flow.
+
+# 2025-11-26 16:58:04.599450
++change app name to "Currency Converter"
++
++generate new icon image "Currency Converter app"
++
++Traveler-Centric Prompts
++These prompts reflect real-world scenarios where a traveler would urgently need the app.
++
++1. Offline Reliability & Context
++The most critical feature for a traveler.
++
++Prompt: "I just landed in Thailand (THB) and have no data connection. Convert 1,500 THB to my home currency (USD) and clearly display the time the last rate update was made."
++
++Focus: Tests offline mode, defaults to the user's home currency, and provides transparency on data freshness.
++
++Prompt: "Open the app in 'Offline Mode' and show the 5-day historical trend for EUR/USD using only cached data."
++
++Focus: Tests if historical data, not just the spot rate, is available for basic offline planning.
++
++2. Quick Price Check (The Bazaar/Market Test)
++Fast input and comparison are essential when haggling or shopping.
++
++Prompt: "A vendor quotes 28,000 COP for a souvenir. Convert this to CAD immediately, and then quickly convert 32,000 COP without clearing the screen."
++
++Focus: Tests speed of entry, ability to convert large numbers accurately, and retaining the context for comparison.
++
++Prompt: "A menu item is listed at $18 USD in a country that uses MXN. Convert the price to MXN and display the result alongside the $15 USD price for the alternative item."
++
++Focus: Tests side-by-side or quick-toggle comparison for decision-making.
++
++3. The ATM and Fee Dilemma
++Travelers often use ATMs, where fees and manual rates are key.
++
++Prompt: "I am withdrawing €200 EUR. My bank charges a 4% foreign transaction fee. Calculate the total amount in GBP (my home currency) after the fee is applied."
++
++Focus: Tests the ability to add a custom percentage fee to the conversion calculation.
++
++Prompt: "A local ATM offers a static rate of 1 AUD = 0.65 EUR (Dynamic Currency Conversion). I want to compare this to the app's current live rate. Show the difference in AUD for a €500 withdrawal."
++
++Focus: Tests the ability to temporarily input a manual, user-defined exchange rate for comparison purposes.
++
++4. Multi-Stop Trip Management
++For users crossing borders or dealing with a temporary local currency.
++
++Prompt: "Set the primary 'Local' currency to CZK and a secondary 'Home' currency to USD. Convert $40 USD to CZK, and then immediately convert the resulting CZK amount into PLN for the next leg of the trip."
++
++Focus: Tests chain conversions and managing a default 'Home' vs. 'Local' currency pair.
++
++Prompt: "Create a 'Trip Folder' for my upcoming Asia Tour and pre-select JPY, KRW, THB, and SGD for immediate display whenever the folder is opened."
++
++Focus: Tests pre-configuration, multi-currency display, and quick switching between relevant currency lists.
++
++5. Tipping and Splitting Bills
++Common, on-the-spot mathematical needs.
++
++Prompt: "The dinner bill is 7,800 JPY. We want to leave a 10% tip and split the total evenly among 4 people. Show the final per-person cost in AUD."
++
++Focus: Tests integrated calculator functions (addition/percentage/division) within the currency conversion flow.
