@@ -45,7 +45,8 @@ async function fetchQuestions() {
         }
       }
     }
-    const shuffled = qs.sort(() => Math.random() - 0.5);
+    const sorted = qs.sort((a, b) => a.question.length - b.question.length);
+    const shuffled = sorted.sort(() => Math.random() - 0.5);
     setQuestions(shuffled.slice(0, 100));
     setLoading(false);
   } catch (e) {
