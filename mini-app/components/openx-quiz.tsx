@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Share from "@/components/share";
+import { url } from "@/lib/metadata";
 
 interface Question {
   question: string;
@@ -16,43 +18,45 @@ export default function OpenXQuiz() {
   const [gameOver, setGameOver] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    async function fetchQuestions() {
-      try {
-        const res = await fetch(
-          "https://docs.openxai.org/tokenomics-and-economic-design/smart-contracts"
-        );
-        const text = await res.text();
-        const lines = text.split("\n");
-        const qs: Question[] = [];
-        for (let i = 0; i < lines.length; i++) {
-          const line = lines[i].trim();
-          if (line.startsWith("##")) {
-            const question = line.replace(/^##\s*/, "");
-            const options: string[] = [];
-            let answer = "";
-            for (let j = i + 1; j < i + 5 && j < lines.length; j++) {
-              const optLine = lines[j].trim();
-              if (optLine.startsWith("- ")) {
-                options.push(optLine.replace(/^- /, ""));
-              } else if (optLine.startsWith("* ")) {
-                answer = optLine.replace(/^\* /, "");
-              }
-            }
-            if (question && options.length === 4 && answer) {
-              qs.push({ question, options, answer });
-            }
+async function fetchQuestions() {
+  try {
+    const res = await fetch(
+      "https://docs.openxai.org/tokenomics-and-economic-design/smart-contracts"
+    );
+    const text = await res.text();
+    const lines = text.split("\n");
+    const qs: Question[] = [];
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i].trim();
+      if (line.startsWith("##")) {
+        const question = line.replace(/^##\s*/, "");
+        const options: string[] = [];
+        let answer = "";
+        for (let j = i + 1; j < i + 5 && j < lines.length; j++) {
+          const optLine = lines[j].trim();
+          if (optLine.startsWith("- ")) {
+            options.push(optLine.replace(/^- /, ""));
+          } else if (optLine.startsWith("* ")) {
+            answer = optLine.replace(/^\* /, "");
           }
         }
-        const shuffled = qs.sort(() => Math.random() - 0.5);
-        setQuestions(shuffled.slice(0, 100));
-        setLoading(false);
-      } catch (e) {
-        console.error(e);
+        if (question && options.length === 4 && answer) {
+          const shuffledOptions = options.sort(() => Math.random() - 0.5);
+          qs.push({ question, options: shuffledOptions, answer });
+        }
       }
     }
-    fetchQuestions();
-  }, []);
+    const shuffled = qs.sort(() => Math.random() - 0.5);
+    setQuestions(shuffled.slice(0, 100));
+    setLoading(false);
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+useEffect(() => {
+  fetchQuestions();
+}, []);
 
   const handleSelect = (opt: string) => {
     setSelected(opt);
@@ -74,7 +78,26 @@ export default function OpenXQuiz() {
   };
 
   if (loading) return <p>Loading questions...</p>;
-  if (gameOver) return <p>Congratulations! You completed 100 questions.</p>;
+  if (gameOver) return (
+    <div className="flex flex-col items-center gap-4">
+      <p className="text-xl">Congratulations! You completed 100 questions.</p>
+      <Share text={`I scored ${correctCount} out of ${questions.length} in the OpenX quiz! ${url}`} />
+      <button
+        className="border rounded p-2 hover:bg-gray-200"
+        onClick={() => {
+          setQuestions([]);
+          setCurrent(0);
+          setSelected(null);
+          setCorrectCount(0);
+          setGameOver(false);
+          setLoading(true);
+          fetchQuestions();
+        }}
+      >
+        Retake Quiz
+      </button>
+    </div>
+  );
 
   const q = questions[current];
 
