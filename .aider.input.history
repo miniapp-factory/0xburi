@@ -242,3 +242,37 @@
 +
 +User can add target currency as much as user could.
 +
+
+# 2025-12-03 14:41:06.781217
++change app name to OPENX quiz app
++
++build simple quiz app.
++
++create 100 random questions from "https://docs.openxai.org/tokenomics-and-economic-design/smart-contracts"
++
++select answer from 4 options
++
++if the answer is correct then go to next quiz until 100 question ends.
++
++if the answer is wrong then show correct answer and start again.
++
++when 100 quiz will be solved hit in a row, game ends.
++
++
+
+# 2025-12-03 14:41:06.781915
++change app name to OPENX quiz app
++
++build simple quiz app.
++
++create 100 random questions from "https://docs.openxai.org/tokenomics-and-economic-design/smart-contracts"
++
++select answer from 4 options
++
++if the answer is correct then go to next quiz until 100 question ends.
++
++if the answer is wrong then show correct answer and start again.
++
++when 100 quiz will be solved hit in a row, game ends.
++
++
