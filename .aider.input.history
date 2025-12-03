@@ -294,3 +294,15 @@
 +Allow the user to retake the quiz as many times as they want. Randomize the order of the answers for each question.
 +
 +Place the quiz on the home page.
+
+# 2025-12-03 15:27:38.012935
++read "https://docs.openxai.org/" and create simple quiz app.
++
++Teach people about Openxai, just like “Brilliant” app does it , make it hard with lots of questions, interactive learning content questions about OPENX. each question gets harder. When they get it wrong send them back to start. Randomise the questions but rate by difficulty to keep easy questions first, harder questions later. It should progressively get harder. Place the quiz on the home page.
++
+
+# 2025-12-03 15:27:38.013311
++read "https://docs.openxai.org/" and create simple quiz app.
++
++Teach people about Openxai, just like “Brilliant” app does it , make it hard with lots of questions, interactive learning content questions about OPENX. each question gets harder. When they get it wrong send them back to start. Randomise the questions but rate by difficulty to keep easy questions first, harder questions later. It should progressively get harder. Place the quiz on the home page.
++
