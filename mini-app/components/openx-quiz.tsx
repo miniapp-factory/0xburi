@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Share from "@/components/share";
+import { Share } from "@/components/share";
 import { url } from "@/lib/metadata";
 
 interface Question {
@@ -13,7 +13,6 @@ interface Question {
 export default function OpenXQuiz() {
   const [questions, setQuestions] = useState<Question[]>([]);
   const [current, setCurrent] = useState(0);
-  const [selected, setSelected] = useState<string | null>(null);
   const [correctCount, setCorrectCount] = useState(0);
   const [gameOver, setGameOver] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -59,7 +58,6 @@ useEffect(() => {
 }, []);
 
   const handleSelect = (opt: string) => {
-    setSelected(opt);
     if (opt === questions[current].answer) {
       const newCorrect = correctCount + 1;
       if (newCorrect === 100) {
