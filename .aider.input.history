@@ -276,3 +276,21 @@
 +when 100 quiz will be solved hit in a row, game ends.
 +
 +
+
+# 2025-12-03 14:57:21.217338
++A quiz that learn about Openxai to by answering 5 multiple choice questions and be able to share result.
++
++Generate 100 quiz from "https://docs.openxai.org/tokenomics-and-economic-design/smart-contracts" and display it on the result page. 
++
++Allow the user to retake the quiz as many times as they want. Randomize the order of the answers for each question.
++
++Place the quiz on the home page.
+
+# 2025-12-03 14:57:21.218421
++A quiz that learn about Openxai to by answering 5 multiple choice questions and be able to share result.
++
++Generate 100 quiz from "https://docs.openxai.org/tokenomics-and-economic-design/smart-contracts" and display it on the result page. 
++
++Allow the user to retake the quiz as many times as they want. Randomize the order of the answers for each question.
++
++Place the quiz on the home page.
