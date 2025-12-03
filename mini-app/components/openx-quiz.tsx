@@ -60,18 +60,16 @@ useEffect(() => {
   const handleSelect = (opt: string) => {
     if (opt === questions[current].answer) {
       const newCorrect = correctCount + 1;
+      setCorrectCount(newCorrect);
       if (newCorrect === 100) {
         setGameOver(true);
       } else {
-        setCorrectCount(newCorrect);
         setCurrent(current + 1);
-        setSelected(null);
       }
     } else {
       alert(`Wrong! Correct answer: ${questions[current].answer}`);
       setCorrectCount(0);
       setCurrent(0);
-      setSelected(null);
     }
   };
 
@@ -85,7 +83,6 @@ useEffect(() => {
         onClick={() => {
           setQuestions([]);
           setCurrent(0);
-          setSelected(null);
           setCorrectCount(0);
           setGameOver(false);
           setLoading(true);
